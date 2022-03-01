@@ -117,8 +117,8 @@ else{
     const detailPart=document.getElementById('detail_part');
 detailPart.textContent='';
 const div=document.createElement('div');
-div.innerHTML=`<div class="card mx-auto" style="width:50rem;">
-<img src="${image}" class="card-img-top mx-auto" style="height:500px ; width:20rem;" alt="...">
+div.innerHTML=`<div class="card col-mg-12 col-sm-12 mx-auto" style="width:70%;">
+<img src="${image}" class="card-img-top img-fluid mx-auto" style="height:500px ; width:20rem;" alt="...">
 <div class="card-body">
   
     <h3>${name}</h3>
