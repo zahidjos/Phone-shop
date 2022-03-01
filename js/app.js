@@ -46,8 +46,8 @@ for(let i=0; i<20; i++ ){
 }
 else{
     mobileData.map(singleMobileData=>{
-        // console.log(singleMobileData);
-        let{brand,phone_name,slug,image}=singleMobileData;
+        console.log(singleMobileData);
+        let{brand,phone_name,slug,image,}=singleMobileData;
         const div=document.createElement('div');
         div.classList.add('col-lg-4');
         div.innerHTML=` <div class="card mb-3 mx-auto" style="width: 18rem;">
@@ -73,22 +73,78 @@ fetch(url)
 }
 
 const detailData=(data)=>{
-    console.log(data);
+    // console.log(data);
 let detail=data.data;
 let{brand,image,name,releaseDate,mainFeatures,others}=detail;
-const detailPart=document.getElementById('detail_part');
+let {chipSet,displaySize,memory,sensors,storage}=mainFeatures;
+
+let{Bluetooth,GPS,NFC,Radio,USB,WLAN}=others;
+console.log(Bluetooth);
+
+if(releaseDate===''){
+    const detailPart=document.getElementById('detail_part');
+    detailPart.textContent='';
+    const div=document.createElement('div');
+    div.innerHTML=`<div class="card mx-auto" style="width:50rem;">
+    <img src="${image}" class="card-img-top mx-auto" style="height:500px ; width:20rem;" alt="...">
+    <div class="card-body">
+      
+        <h3>${name}</h3>
+       
+        <h5>Release: Release date not found</h5>
+        <h6>Brand: ${brand}</h6>
+        <ul>
+        <li>ChipSet: ${chipSet}</li>
+        <li>DisplaySize: ${displaySize}</li>
+        <li>Memory: ${memory}</li>
+         <li>Sensors: ${sensors}</li>
+        <li>Storage: ${storage}</li>
+        <li>Bluetooth: ${Bluetooth}</li>
+        <li>GPS: ${GPS}</li>
+        <li>NFC: ${NFC}</li>
+        <li>Radio: ${Radio}</li>
+        <li>USB: ${USB}</li>
+        <li>WLAN: ${WLAN}</li>
+
+       
+    </ul>
+        
+    </div>
+    </div>`
+    detailPart.appendChild(div);
+}
+else{
+    const detailPart=document.getElementById('detail_part');
 detailPart.textContent='';
 const div=document.createElement('div');
 div.innerHTML=`<div class="card mx-auto" style="width:30rem;">
-<img src="${image}" class="card-img-top" alt="...">
+<img src="${image}" class="card-img-top mx-auto" style="height:500px ; width:20rem;" alt="...">
 <div class="card-body">
   
     <h3>${name}</h3>
-    <p>${brand}</p>
-    <h6>release:${releaseDate}</h6>
+    
+    <h5>Release: ${releaseDate}</h5>
+    <h6>Brand: ${brand}</h6>
+    <ul>
+        <li>ChipSet: ${chipSet}</li>
+        <li>DisplaySize: ${displaySize}</li>
+        <li>Memory: ${memory}</li>
+         <li>Sensors: ${sensors}</li>
+        <li>Storage: ${storage}</li>
+        <li>Bluetooth: ${Bluetooth}</li>
+        <li>GPS: ${GPS}</li>
+        <li>NFC: ${NFC}</li>
+        <li>Radio: ${Radio}</li>
+        <li>USB: ${USB}</li>
+        <li>WLAN: ${WLAN}</li>
+
+       
+    </ul>
     
 </div>
 </div>`
 detailPart.appendChild(div);
+}
+
 
 }
