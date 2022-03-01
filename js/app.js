@@ -23,7 +23,7 @@ detailPart.textContent='';
 if(mobileData.length==0){
     const h3=document.createElement('h3');
     h3.classList.add('text-center');
-    h3.classList.add('text-danger');
+    h3.classList.add('text-light');
     h3.innerText="Sorry, your mobile is not find" ;
     cardRow.appendChild(h3);
 
@@ -54,7 +54,7 @@ else{
         <img src="${image}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${phone_name}</h5>
-          <p class="card-text">Brand:${brand}</p>
+          <p class="card-text">Brand: ${brand}</p>
           <a href="#" onclick="detailPhone('${slug}')" class="btn btn-primary">Details</a>
         </div>`
         cardRow.appendChild(div);
@@ -94,17 +94,17 @@ if(releaseDate===''){
         <h5>Release: Release date not found</h5>
         <h6>Brand: ${brand}</h6>
         <ul>
-        <li>ChipSet: ${chipSet}</li>
-        <li>DisplaySize: ${displaySize}</li>
-        <li>Memory: ${memory}</li>
-         <li>Sensors: ${sensors}</li>
-        <li>Storage: ${storage}</li>
-        <li>Bluetooth: ${Bluetooth}</li>
-        <li>GPS: ${GPS}</li>
-        <li>NFC: ${NFC}</li>
-        <li>Radio: ${Radio}</li>
-        <li>USB: ${USB}</li>
-        <li>WLAN: ${WLAN}</li>
+        <li><span>ChipSet:</span> ${chipSet}</li>
+        <li><span>DisplaySize:</span> ${displaySize}</li>
+        <li><span>Memory:</span> ${memory}</li>
+        <li><span>Sensors:</span> ${sensors}</li>
+        <li><span>Storage:</span> ${storage}</li>
+        <li><span>Bluetooth:</span> ${Bluetooth}</li>
+        <li><span>GPS:</span> ${GPS}</li>
+        <li><span>NFC:</span> ${NFC}</li>
+        <li><span>Radio:</span> ${Radio}</li>
+        <li><span>USB:</span> ${USB}</li>
+        <li><span>WLAN:</span> ${WLAN}</li>
 
        
     </ul>
@@ -117,7 +117,7 @@ else{
     const detailPart=document.getElementById('detail_part');
 detailPart.textContent='';
 const div=document.createElement('div');
-div.innerHTML=`<div class="card mx-auto" style="width:30rem;">
+div.innerHTML=`<div class="card mx-auto" style="width:50rem;">
 <img src="${image}" class="card-img-top mx-auto" style="height:500px ; width:20rem;" alt="...">
 <div class="card-body">
   
@@ -126,17 +126,17 @@ div.innerHTML=`<div class="card mx-auto" style="width:30rem;">
     <h5>Release: ${releaseDate}</h5>
     <h6>Brand: ${brand}</h6>
     <ul>
-        <li>ChipSet: ${chipSet}</li>
-        <li>DisplaySize: ${displaySize}</li>
-        <li>Memory: ${memory}</li>
-         <li>Sensors: ${sensors}</li>
-        <li>Storage: ${storage}</li>
-        <li>Bluetooth: ${Bluetooth}</li>
-        <li>GPS: ${GPS}</li>
-        <li>NFC: ${NFC}</li>
-        <li>Radio: ${Radio}</li>
-        <li>USB: ${USB}</li>
-        <li>WLAN: ${WLAN}</li>
+        <li><span>ChipSet:</span> ${chipSet}</li>
+        <li><span>DisplaySize:</span> ${displaySize}</li>
+        <li><span>Memory:</span> ${memory}</li>
+        <li><span>Sensors:</span> ${sensors}</li>
+        <li><span>Storage:</span> ${storage}</li>
+        <li><span>Bluetooth:</span> ${Bluetooth}</li>
+        <li><span>GPS:</span> ${GPS}</li>
+        <li><span>NFC:</span> ${NFC}</li>
+        <li><span>Radio:</span> ${Radio}</li>
+        <li><span>USB:</span> ${USB}</li>
+        <li><span>WLAN:</span> ${WLAN}</li>
 
        
     </ul>

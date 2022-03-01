@@ -1,3 +1,45 @@
+body{
+    background: url(../image/photo-3.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+font-family: 'Open Sans', sans-serif;
+}
+/* ###############################
+heading style start
+################################# */
 #fast_part{
     padding: 50px;
+
 }
+#fast_part h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+#fast_part h1 span{
+    color: #FC934D;
+}
+/* ###############################
+heading style end
+################################# */
+/* ###############################
+input style start
+################################# */
+
+.input_part button{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: #4D91FC;
+}
+/* ###############################
+input style end
+################################# */
+
+#detail_part ul li span{
+    
+    font-weight: 700;
+}
+
