@@ -50,7 +50,7 @@ else{
         let{brand,phone_name,slug,image,}=singleMobileData;
         const div=document.createElement('div');
         div.classList.add('col-lg-4');
-        div.innerHTML=` <div class="card mb-3 mx-auto" style="width: 18rem;">
+        div.innerHTML=` <div class="card  mb-3 mx-auto" style="width: 18rem;">
         <img src="${image}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${phone_name}</h5>
@@ -85,8 +85,8 @@ if(releaseDate===''){
     const detailPart=document.getElementById('detail_part');
     detailPart.textContent='';
     const div=document.createElement('div');
-    div.innerHTML=`<div class="card mx-auto" style="width:50rem;">
-    <img src="${image}" class="card-img-top mx-auto" style="height:500px ; width:20rem;" alt="...">
+    div.innerHTML=`<div class="card col-mg-12 col-sm-12 mx-auto" style="width:70%;">
+    <img src="${image}" class="card-img-top img-fluid mx-auto" style="height:500px ; width:20rem;" alt="...">
     <div class="card-body">
       
         <h3>${name}</h3>
